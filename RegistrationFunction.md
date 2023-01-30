@@ -1,0 +1,8 @@
+# Aprendendo-Python
+Estudos de python
+
+def cadastro():
+  nome = input('Qual é o seu nome? ')
+  sobrenome = input('Qual é o seu sobrenome? ')
+  nome_completo = nome + ' ' + sobrenome
+  print(f'Então, seu nome é {nome_completo}')
