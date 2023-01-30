@@ -1,0 +1,7 @@
+def cnh():
+  idade = input('Qual é a sua idade? ')
+  idade = int(idade)
+  if idade >= 18:
+      print('Pode dirigir sim! Cuida e vai tirar essa CNH, cristão.')
+  else:
+      print('Não pode dirigir! Vai tirar a catinga do mijo, minino(a) piolhento(a).')
