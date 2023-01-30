@@ -1,0 +1,11 @@
+def velocidade():
+  print('Olá, seja bem-vindo ao Velocity Calculator!')
+  distância_percorrida = input('Por favor, digite a distância, em metros, que será ou que foi percorrida: ')
+  distância_percorrida = int(distância_percorrida)
+  tempo_deslocado = input('Agora, digite o tempo, em segundos, de deslocamento:')
+  tempo_deslocado = int(tempo_deslocado)
+  velocidade = distância_percorrida/tempo_deslocado 
+  print('Só um momento enquanto eu calculo...')
+  print('Tá quase lá...')
+  print('Pronto!')
+  print(f'Velocidade = {velocidade} m/s')
