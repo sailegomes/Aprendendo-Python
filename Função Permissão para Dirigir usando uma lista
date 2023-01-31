@@ -1,0 +1,9 @@
+list = [12, 13, 15, 18, 19] # Lista with ages
+def license_to_drive(list):
+  for ages in list:
+    if ages >= 18:
+      print(f'{ages} years old have permission to drive.')
+    else:
+      print(f'{ages} years old do not have permission to drive.')
+
+license_to_drive(list)
