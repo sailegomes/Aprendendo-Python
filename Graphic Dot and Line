@@ -1,0 +1,13 @@
+notas_matematica_trimestre = []
+
+for notas in range(8):
+  notas_matematica_trimestre.append(randrange(1,9))
+  
+x = list(range(1,9))
+y = notas_matematica_trimestre
+
+plt.plot(x,y, marker = 'o')
+plt.title('Gráfico de Notas - Lucas Aragão')
+plt.xlabel('Provas')
+plt.ylabel('Notas')
+plt.show()
