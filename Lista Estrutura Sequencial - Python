@@ -1,0 +1,288 @@
+Aqui irei deixar registrado minha resolução feita em Python da lista de estrutura sequencial. Meu intuito é praticar Python e me tornar um mestre, e para isso iniciei
+com esta lista básica. Logo mais irei postar mais listas com minhas resoluções. Esta lista foi tirada do site PythonBrasil.
+
+#Questão 1) Faça um Programa que mostre a mensagem "Olá, mundo" na tela.
+
+#Podemos criar uma função:
+def diga_OI():
+  print('English: Hello, world!')
+  print('Portuguese: Olá, mundo!')
+
+diga_OI()
+
+#Ou podemos simplesmente usar 'print()':
+print('Hello, world.')
+
+# ---------------------------------------------------------------------------------------
+#Questão 2) Faça um Programa que peça um número e então mostre a mensagem 'O número informado foi [número]'.
+
+def number():
+  numero = input('Escolha um número inteiro: ')
+  print(f'O número informado foi o {numero}.')
+
+number()
+
+# ---------------------------------------------------------------------------------------
+#Questão 3) Faça um Programa que peça dois números e imprima a soma.
+
+def soma():
+  numero_1 = input('Diga um número:')
+  numero_1 = int(numero_1)
+  numero_2 = input('Diga um segundo número:')
+  numero_2 = int(numero_2)
+  soma = numero_1 + numero_2
+  print(f'A soma dos números é {soma}.')
+
+soma()
+
+# ---------------------------------------------------------------------------------------
+#Questão 4) Faça um Programa que peça as 4 notas bimestrais e mostre a média.
+
+def media_notas():
+  primeira = input('Valor da primeira nota: ')
+  primeira = int(primeira)
+  segunda = input('Valor da segunda nota: ')
+  segunda = int(segunda)
+  terceira = input('Valor da terceira nota: ')
+  terceira = int(terceira)
+  quarta = input('Valor da quarta nota: ')
+  quarta = int(quarta)
+  soma = primeira+segunda+terceira+quarta
+  media = soma/4
+  if(media >= 7):
+    print(f'A média das notas bimestrais é: {media}. Parabéns, você passou!')
+  else:
+    print(f'A média das notas bimestrais é: {media}. Lamento, mas você reprovou!')
+
+media_notas()
+
+# ---------------------------------------------------------------------------------------
+#Questão 5) Faça um Programa que converta metros para centímetros.
+
+#"Com parâmetro":
+def conversor(a):
+  b = a*100
+  print(f'{b} cm.')
+
+#"Sem parâmetro":
+def converso_r():
+  valor = input('Digite o valor a ser convertido: ')
+  valor = float(valor)
+  valor = valor*100
+  print(f'{valor} cm')
+
+conversor(20.5)
+
+# ---------------------------------------------------------------------------------------
+#Questão 6) Faça um Programa que peça o raio de um círculo, calcule e mostre sua área.
+def area_circulo():
+  import math
+  r = input('Raio do círculo (cm): ')
+  r = float(r)
+  area = round(math.pi*(r**2),2)
+  print(f'A área do círculo é {area} cm².')
+
+area_circulo()
+
+# ---------------------------------------------------------------------------------------
+#Questão 7) Faça um Programa que calcule a área de um quadrado, em seguida mostre o dobro desta área para o usuário.
+def area_do_quadrado(a):
+  b = a**2
+  c = 2*b
+  print(f'A área do quadrado é {b} cm².')
+  print(f'O dobro da área do quadrado é {c} cm².')
+
+area_do_quadrado(16)
+
+# ---------------------------------------------------------------------------------------
+#Questão 8) Faça um Programa que pergunte quanto você ganha por hora e o número de horas trabalhadas no mês. 
+#Calcule e mostre o total do seu salário no referido mês.
+
+def curiar_o_seu_salario():
+  a = input('Quanto você ganha por hora? ')
+  a = float(a)
+  b = input('Quantas horas você trabalhou no mês? ')
+  b = int(b)
+  salario = a*b
+  print(f'O seu salário nesse mês é de R${salario}')
+
+curiar_o_seu_salario()
+
+# ---------------------------------------------------------------------------------------
+#Questão 9) Faça um Programa que peça a temperatura em graus Fahrenheit, transforme e mostre a temperatura em graus Celsius.
+
+def conversor_temperatura():
+  a = input('Insira um valor para a temperatura em graus Fahrenheit: ')
+  a = float(a)
+  temperatura = round(5 * ((a-32)/9),2)
+  print(f'A temperatura em graus Celsius é igual a {temperatura}°C.')
+
+conversor_temperatura()
+
+# ---------------------------------------------------------------------------------------
+#Questão 10) Faça um Programa que peça a temperatura em graus Celsius, transforme e mostre em graus Fahrenheit.
+
+def conversor_temperatura2():
+  a = input('Insira um valor para a temperatura em graus Celcius: ')
+  a = float(a)
+  temperatura = round((a*(9/5))+32,2)
+  print(f'A temperatura em graus Fahrenheit é igual a {temperatura}°F.')
+
+conversor_temperatura2()
+
+# ---------------------------------------------------------------------------------------
+#Questão 11) Faça um Programa que peça 2 números inteiros e um número real. Calcule e mostre:
+#a)o produto do dobro do primeiro com metade do segundo .
+#b) a soma do triplo do primeiro com o terceiro.
+#c) o terceiro elevado ao cubo.
+
+def operacoes():
+  a = input('Insira um número inteiro: ')
+  b = input('Insira outro número inteiro: ')
+  c = input('Agora, insira qualquer número real: ')
+  a,b,c=int(a),int(b),float(c)
+  primeira_operacao = (a*2) * (b/2)
+  segunda_operacao = (a*3) + c
+  terceira_operacao = c**3
+  print(f'Resposta do item a): {primeira_operacao}')
+  print(f'Resposta do item b): {segunda_operacao}')
+  print(f'Resposta do item c): {terceira_operacao}')
+  
+
+operacoes()
+
+# ---------------------------------------------------------------------------------------
+#Questão 12) Tendo como dados de entrada a altura de uma pessoa, construa um algoritmo que calcule seu peso ideal, 
+#usando a seguinte fórmula: (72.7*altura) - 58
+
+def calculadora_IMC(altura):
+  imc = (72.7 * altura) - 58
+  print(f'Seu peso ideal é de {imc} Kg.')
+
+calculadora_IMC(1.83)
+
+# ---------------------------------------------------------------------------------------
+#Questão 13) Tendo como dado de entrada a altura (h) de uma pessoa, construa um algoritmo que calcule seu peso ideal, 
+#utilizando as seguintes fórmulas:
+#Para homens: (72.7*h) - 58
+#Para mulheres: (62.1*h) - 44.7
+
+def calculadora_IMC2(altura):
+  imc_homens = (72.7 * altura) - 58
+  print(f'Para o homem, o peso ideal é de {imc_homens} Kg.')
+  imc_mulheres = (62.1 * altura) - 44.7
+  print(f'Para a mulher, o peso ideal é de {imc_mulheres} Kg.')
+
+calculadora_IMC2(1.83)
+
+# ---------------------------------------------------------------------------------------
+#Questão 14) João Papo-de-Pescador, homem de bem, comprou um microcomputador para controlar o rendimento diário de seu trabalho. Toda vez que ele 
+#traz um peso de peixes maior que o estabelecido pelo regulamento de pesca do estado de São Paulo (50 quilos) deve pagar uma multa de R$ 4,00 por 
+#quilo excedente. João precisa que você faça um programa que leia a variável peso (peso de peixes) e calcule o excesso. Gravar na variável excesso 
+#a quantidade de quilos além do limite e na variável multa o valor da multa que João deverá pagar. Imprima os dados do programa com as mensagens 
+#adequadas.
+
+def calculadora_valor_peso():
+  peso_peixe = input('Qual é o peso do peixe? ')
+  peso_peixe = float(peso_peixe)
+  excesso = round(peso_peixe - 50,2)
+  valor_a_pagar = round(excesso*4,3)
+  if(excesso <=0):
+    print('Parabéns! O peso do peixe pescado está dentro do permitido de acordo com o regulamento de pesca do estado de São Paulo.')
+    print('uhh...')
+    print('Mas...na minha opinião. Isso tá errado ok? Ninguém deveria pagar a mais por causa do peso do peixe que VOCÊ mesmo pescou. Tenha um ótimo dia!')
+  else:
+    print(f'Lamento, mas você deve pagar o excesso de {excesso} Kg. O valor a ser pago é de R${valor_a_pagar}')
+    
+calculadora_valor_peso()
+
+# ---------------------------------------------------------------------------------------
+#Questão 15) Faça um Programa que pergunte quanto você ganha por hora e o número de horas trabalhadas no mês. Calcule e mostre o total do 
+#seu salário no referido mês, sabendo-se que são descontados 11% para o Imposto de Renda, 8% para o INSS e 5% para o sindicato, faça um 
+#programa que nos dê:
+#a) salário bruto.
+#b) quanto pagou ao INSS.
+#c) quanto pagou ao sindicato.
+#d) o salário líquido.
+#Calcule os descontos e o salário líquido, conforme a tabela abaixo:
+
+def calculadora_salario():
+  salario_por_hora = input('Quanto você ganha por hora? ')
+  horas_trab_mês = input('Quantas horas você trabalha no mês? ')
+  salario_por_hora = float(salario_por_hora)
+  horas_trab_mês = int(horas_trab_mês)
+  salario_bruto = salario_por_hora * horas_trab_mês
+  print(f'Salário Bruto: R${salario_bruto} ')
+  imposto_renda = 0.11 * salario_bruto 
+  print(f'IR: R${imposto_renda} ')
+  valor_inss = 0.08 * salario_bruto
+  print(f'INSS: R${valor_inss} ')
+  valor_sindicato = 0.05 * salario_bruto
+  print(f'Sindicato: R${valor_sindicato} ')
+  salario_liquido = salario_bruto - imposto_renda - valor_inss - valor_sindicato
+  print(f'Salário Líquido: R${salario_liquido}')  
+
+calculadora_salario()
+
+# ---------------------------------------------------------------------------------------
+#Questão 16) Faça um programa para uma loja de tintas. O programa deverá pedir o tamanho em metros quadrados da área a ser pintada. 
+#Considere que a cobertura da tinta é de 1 litro para cada 3 metros quadrados e que a tinta é vendida em latas de 18 litros, que custam R$ 80,00. 
+#Informe ao usuário a quantidades de latas de tinta a serem compradas e o preço total.
+
+def tintas_ltda():
+  import math
+  tam = input('Quanto mede, em m², a área que será pintada? ')
+  tam = float(tam)
+  litros_necessarios = tam/3
+  numero_latas = math.floor(litros_necessarios/18)
+  preco_latas = 80 * numero_latas
+  print(f'Quantidade necessária de lata(s) de tinta: {numero_latas}')
+  print(f'Preço total de {numero_latas} lata(s) de tinta: R${preco_latas}')
+
+tintas_ltda()
+
+# ---------------------------------------------------------------------------------------
+#Questão 17) Faça um Programa para uma loja de tintas. O programa deverá pedir o tamanho em metros quadrados da área a ser pintada. 
+#Considere que a cobertura da tinta é de 1 litro para cada 6 metros quadrados e que a tinta é vendida em latas de 18 litros, que custam 
+#R$ 80,00 ou em galões de 3,6 litros, que custam R$ 25,00.
+#Informe ao usuário as quantidades de tinta a serem compradas e os respectivos preços em 3 situações:
+#a) comprar apenas latas de 18 litros;
+#b) comprar apenas galões de 3,6 litros;
+#c) misturar latas e galões, de forma que o desperdício de tinta seja menor. Acrescente 10% de folga e sempre arredonde os valores para cima, 
+#isto é, considere latas cheias.
+
+def tintas_ltda():
+  import math
+  tam = input('Quanto mede, em m², a área que será pintada? ')
+  tipo = input('As tintas serão em latas(1) ou galões(2)? ')
+  tam = float(tam)
+  tipo = int(tipo)
+  litros_necessarios = round(tam/6,2)
+  numero_latas_18 = math.floor(litros_necessarios/18)
+  numero_galoes_36 = math.floor(litros_necessarios/3.6)
+  preco_latas_18 = 80 * numero_latas_18
+  preco_galoes_36 = 25 * numero_galoes_36
+  if(tipo == 1):
+    print(f'Quantidade necessária de lata(s) de tinta: {numero_latas_18}')
+    print(f'Preço total de {numero_latas_18} lata(s) de tinta: R${preco_latas_18}')
+  else:
+    print(f'Quantidade necessária de galão(ões) de tinta: {numero_galoes_36}')
+    print(f'Preço total de {numero_galoes_36} galão(ões) de tinta: R${preco_galoes_36}')
+
+
+tintas_ltda()
+
+# ---------------------------------------------------------------------------------------
+#Questão 18) Faça um programa que peça o tamanho de um arquivo para download (em MB) e a velocidade de um link de Internet (em Mbps), calcule e 
+#informe o tempo aproximado de download do arquivo usando este link (em minutos).
+
+def tempo_download():
+  tamanho = input('Qual o tamanho(em MB) do arquivo? ')
+  tamanho = float(tamanho)
+  velocidade = input('Qual a velocidade(em Mbps) do link de Internet? ')
+  velocidade = float(velocidade)
+  tempo = round(tamanho/velocidade,2)
+  print(f'O tempo para baixar o arquvio de {tamanho} MB é de {tempo}s.')
+
+tempo_download()
+
