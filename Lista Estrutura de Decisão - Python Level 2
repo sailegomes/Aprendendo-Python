@@ -1,0 +1,779 @@
+#1) Faça um Programa que peça dois números e imprima o maior deles.
+import datetime
+
+
+def numeros():
+    a = input('\nOlá, usuário! Insira um número: ')
+    a = float(a)
+    b = input('\nAgora, insira um segundo número: ')
+    b = float(b)
+    if(a > b):
+        print(f'\n O maior número inserido foi o {a}!')
+    else:
+        print(f'\n O maior número inserido foi o {b}!')
+
+numeros()
+#%%
+#2) Faça um Programa que peça um valor e mostre na tela se o valor é positivo ou negativo.
+def polaridade():
+    a = input('\n Insira um número qualquer: ')
+    a = float(a)
+    if(a>0):
+        print('\n O número inserido é positivo.')
+    elif(a<0):
+        print('\n O número inserido é negativo.')
+    else:
+        print('\n O número inserido foi o zero.')
+
+polaridade()
+#%%
+#3) Faça um Programa que verifique se uma letra digitada é "F" ou "M". Conforme a letra escrever: F - Feminino, M - Masculino, Sexo Inválido.
+def genero():
+    a = input('Insira o seu sexo: ')
+    if(a == 'M'):
+        print('M - Masculino')
+    elif(a == 'm'):
+        print('M - Masculino')
+    elif(a == 'F'):
+        print('F - Feminino')
+    elif(a == 'f'):
+        print('F - Feminino')
+    else:
+        print('Sexo inserido inválido.')
+
+genero()
+#%%
+#4) Faça um Programa que verifique se uma letra digitada é vogal ou consoante.
+def letras():
+    a = input('Digite uma letra qualquer: ')
+    b = ['a','e','i','o','u']
+    if(a in b):
+        print('A letra inserida é uma vogal.')
+    else:
+        print('A letra inserida é uma consoante.')
+
+letras()
+#%%
+#5) Faça um programa para a leitura de duas notas parciais de um aluno. O programa deve calcular a média alcançada por aluno e apresentar:
+#A mensagem "Aprovado", se a média alcançada for maior ou igual a sete;
+#A mensagem "Reprovado", se a média for menor do que sete;
+#A mensagem "Aprovado com Distinção", se a média for igual a dez.
+def notas(a,b):
+    media = (a+b)/2
+    media = float(media)
+    if(  7 <= media < 10):
+        print('O aluno está APROVADO! Meus parabéns!')
+    elif(media < 7):
+        print('O aluno está REPROVADO! Hoje a chinela vai cantar.')
+    else:
+        print('O aluno está APROVADO COM DISTINÇÃO! Meus parabéns e sucesso!')
+
+notas(5,6)
+#%%
+#6) Faça um Programa que leia três números e mostre o maior deles.
+def numeros(a,b,c):
+    if(a>b) and (a>c):
+        print(f'O maior número é o {a}.')
+    elif(b>a) and (b>c):
+        print(f'O maior número é o {b}.')
+    else:
+        print(f'O maior número é o {c}')
+
+numeros(2,7,13)
+#%%
+#7) Faça um Programa que leia três números e mostre o maior e o menor deles.
+def leitor(a,b,c):
+    a = float(a)
+    b = float(b)
+    c = float(c)
+    if(a> b) and (a> c):
+        print(f'\n O {a} é o maior número. ')
+    elif(b> a) and (b>c):
+        print(f'\n O {b} é o maior número. ')
+    elif(c> a) and (c>b):
+        print(f'\n O {c} é o maior número. ')
+    elif(a<b) and (a<c):
+        print(f'\n O {a} é menor número.')
+    elif(b<a) and (b<c):
+        print(f'\n O {b} é menor número.')
+    else:
+        print(f'\n O {c} é menor número.')
+
+leitor(4,5,6)
+#%%
+#8) Faça um programa que pergunte o preço de três produtos e informe qual produto você deve comprar,
+# sabendo que a decisão é sempre pelo mais barato.
+
+def melhor_compra():
+    a = input('\n Dear user, insert the value of the first product: ')
+    a = float(a)
+    b = input('\n Dear user, insert the value of the next product: ')
+    b = float(b)
+    c = input('\n Dear user, insert the value of the last product: ')
+    c = float(c)
+    elif (a > b) and (a > c):
+        print(f'\n You must buy the product with value U${a}.')
+    elif (b > a) and (b > c):
+        print(f'\n You must buy the product with value U${b}.')
+    else:
+        print(f'\n You must buy the product with value de U${c} dollars.')
+    print(f' Thanks for use the our services. Have a nice day!')
+
+melhor_compra()
+#%%
+# 9) Faça um Programa que leia três números e mostre-os em ordem decrescente.
+def decresc(a,b,c):
+    lista = []
+    lista.append(a)
+    lista.append(b)
+    lista.append(c)
+    a = float(a)
+    b = float(b)
+    c = float(c)
+    d = sorted(lista)
+    print(f'Os números em forma decrescente será: {d}')
+
+decresc(5,6,2)
+#%%
+# 10) Faça um Programa que pergunte em que turno você estuda. Peça para digitar M-matutino ou V-Vespertino ou N- Noturno.
+# Imprima a mensagem "Bom Dia!", "Boa Tarde!" ou "Boa Noite!" ou "Valor Inválido!", conforme o caso.
+
+def mensagem():
+    a = input('\n Em qual turno você estuda? \n Por favor, digite M-matutino, V-vespertino ou N-noturno.')
+    if a == 'M':
+        print('\n Bom dia!')
+    elif a == 'V':
+        print('\n Boa tarde!')
+    elif a == 'N':
+        print('\n Boa noite!')
+    else:
+        print('\n Valor inválido, jerk!')
+
+
+mensagem()
+#%%
+# 11) As Organizações Tabajara resolveram dar um aumento de salário aos seus colaboradores e lhe contrataram para desenvolver o
+# programa que calculará os reajustes. Faça um programa que recebe o salário de um colaborador e o reajuste segundo o seguinte
+# critério, baseado no salário atual:
+#- salários até R$ 280,00 (incluindo) : aumento de 20%
+#- salários entre R$ 280,00 e R$ 700,00 : aumento de 15%
+#- salários entre R$ 700,00 e R$ 1500,00 : aumento de 10%
+#- salários de R$ 1500,00 em diante : aumento de 5% Após o aumento ser realizado, informe na tela:
+#- o salário antes do reajuste;
+#- o percentual de aumento aplicado;
+#- o valor do aumento;
+#- o novo salário, após o aumento.
+
+def salario():
+    salario = input('Quanto é o seu salário? ')
+    salario = float(salario)
+    if salario <= 280:
+        aumento_20 = salario*1.20
+        valor_aumentado20 = salario*0.20
+        print(f'\n O seu salário antes do reajuste era de: R${salario}')
+        print(' O percentual aplicado foi de 20%.')
+        print(f'Valor do aumento: R${valor_aumentado20}')
+        print(f'Seu novo salário é de: R${aumento_20}')
+    elif (salario > 280) and (salario < 700):
+        aumento_15 = salario*1.15
+        valor_aumentado15 = salario*0.15
+        print(f'\n O seu salário antes do reajuste era de: R${salario}')
+        print('\n O percentual aplicado foi de 15%.')
+        print(f'\n Valor do aumento: R${valor_aumentado15}')
+        print(f'\n Seu novo salário é de: R${aumento_15}')
+    elif (salario >= 700) and (salario < 1500):
+        aumento_10 = salario*1.10
+        valor_aumentado10 = salario*0.10
+        print(f'\n O seu salário antes do reajuste era de: R${salario}')
+        print('\n O percentual aplicado foi de 10%.')
+        print(f'\n Valor do aumento: R${valor_aumentado10}')
+        print(f'\n Seu novo salário é de: R${aumento_10}')
+    else:
+        aumento_05 = salario*1.05
+        valor_aumentado05 = salario*0.05
+        print(f'\n O seu salário antes do reajuste era de: R${salario}')
+        print('\n O percentual aplicado foi de 5%.')
+        print(f'\n Valor do aumento: R${valor_aumentado05}')
+        print(f'\n Seu novo salário é de: R${aumento_05}')
+
+salario()
+
+#%%
+#12) Faça um programa para o cálculo de uma folha de pagamento, sabendo que os descontos
+# são do Imposto de Renda, que depende do salário bruto (conforme tabela abaixo) e 3%
+# para o Sindicato e que o FGTS corresponde a 11% do Salário Bruto, mas não é descontado
+# (é a empresa que deposita). O Salário Líquido corresponde ao Salário Bruto menos os
+# descontos. O programa deverá pedir ao usuário o valor da sua hora e a quantidade de
+# horas trabalhadas no mês.
+
+#Desconto do IR:
+#Salário Bruto até 900 (inclusive) - isento
+#Salário Bruto até 1500 (inclusive) - desconto de 5%
+#Salário Bruto até 2500 (inclusive) - desconto de 10%
+#Salário Bruto acima de 2500 - desconto de 20% Imprima
+#na tela as informações, dispostas conforme o exemplo abaixo.
+#No exemplo o valor da hora é 5 e a quantidade de hora é 220.
+
+def folha_pagamento():
+    print('Olá, seja muito bem vindo ao PayCheck! Digite abaixo as informações pedidas.')
+    horas = input('Digite a quantidade de horas que você trabalho no mês: ')
+    horas = float(horas)
+    valor = input('Qual o valor da sua hora trabalhada? ')
+    valor = float(valor)
+    sal_bruto = horas * valor
+    ir = 0.05*sal_bruto
+    inss = 0.10*sal_bruto
+    fgts = 0.11*sal_bruto
+    desconto = ir + inss
+    sal_liq = sal_bruto - desconto
+    if sal_bruto <= 900:
+        print(f'\n Salário bruto: R${sal_bruto}')
+        print(f'\n IR (5%): R${ir}')
+        print(f'\n INSS (10%): R${inss}')
+        print(f'\n FGTS (11%): R${fgts}')
+        print(f'\n Total de descontos: R${desconto}')
+        print(f'\n Salário Líquido: R${sal_liq}')
+    elif 900 < sal_bruto <=1500:
+        print(f'\n Salário bruto: R${sal_bruto}')
+        print(f'\n IR (5%): R${ir}')
+        print(f'\n INSS (10%): R${inss}')
+        print(f'\n FGTS (11%): R${fgts}')
+        print(f'\n Total de descontos: R${desconto}')
+        print(f'\n Salário Líquido: R${sal_liq}')
+    elif 1500 < sal_bruto <= 2000:
+        print(f'\n Salário bruto: R${sal_bruto}')
+        print(f'\n IR (5%): R${ir}')
+        print(f'\n INSS (10%): R${inss}')
+        print(f'\n FGTS (11%): R${fgts}')
+        print(f'\n Total de descontos: R${desconto}')
+        print(f'\n Salário Líquido: R${sal_liq}')
+    else:
+        print(f'\n Salário bruto: R${sal_bruto}')
+        print(f'\n IR (5%): R${ir}')
+        print(f'\n INSS (10%): R${inss}')
+        print(f'\n FGTS (11%): R${fgts}')
+        print(f'\n Total de descontos: R${desconto}')
+        print(f'\n Salário Líquido: R${sal_liq}')
+
+folha_pagamento()
+
+
+
+
+#%%
+#13)Faça um Programa que leia um número e exiba o dia correspondente da semana.
+# (1-Domingo, 2- Segunda, etc.), se digitar outro valor deve aparecer valor inválido.
+
+def dia_semana():
+   dia = input('\n Digite um número e obtenha um dia da semana: ')
+   dia = int(dia)
+   if dia == 1:
+       print('\n Domingo.')
+   elif dia == 2:
+       print('\n Segunda.')
+   elif dia == 3:
+       print('\n Terça.')
+   elif dia == 4:
+       print('\n Quarta.')
+   elif dia == 5:
+       print('\n Quinta.')
+   elif dia == 6:
+       print('\n Sexta.')
+   elif dia == 7:
+       print('\n Sábado.')
+   else:
+       print('\n Valor inválido. Digite outro número, por favor.')
+
+
+dia_semana()
+
+
+#%%
+#14) Faça um programa que lê as duas notas parciais obtidas por um aluno numa disciplina
+# ao longo de um semestre, e calcule a sua média. A atribuição de conceitos obedece à
+# tabela abaixo:
+
+def notas(nota1 , nota2):
+    media = (nota1 + nota2)/2
+    media = float(media)
+    print(f'\n A média é igual a: {media}')
+    if 0 <= media < 4:
+        print('\n O aluno obteve conceito E. REPROVADO!')
+    elif 4 <= media < 6:
+        print('\n O aluno obteve conceito D. REPROVADO!')
+    elif 6 <= media < 7.5:
+        print('\n O aluno obteve conceito C. REPROVADO!')
+    elif 7.5 <= media < 9:
+        print('\n O aluno obteve conceito B. APROVADO!')
+    else:
+        print('\n O aluno obteve conceito A. APROVADO POR MÉDIA!!')
+
+notas(10,9)
+
+
+#%%
+#15) Faça um Programa que peça os 3 lados de um triângulo. O programa deverá informar
+# se os valores podem ser um triângulo. Indique, caso os lados formem um triângulo, se
+# o mesmo é: equilátero, isósceles ou escaleno.
+
+def triangle():
+    ladoA = input('\n Qual o valor do lado A? ')
+    ladoB = input('\n Qual o valor do lado B? ')
+    ladoC = input('\n Qual o valor do lado C? ')
+    ladoA = float(ladoA)
+    ladoB = float(ladoB)
+    ladoC = float(ladoC)
+    if ((ladoA < ladoB + ladoC or ladoB < ladoA + ladoC or ladoC < ladoA + ladoB) and (ladoA == ladoB == ladoC)):
+        print('\n Os valores informados formam um triângulo equilátero.')
+    elif ((ladoA < ladoB + ladoC or ladoB < ladoA + ladoC or ladoC < ladoA + ladoB) and (ladoA == ladoB or ladoA == ladoC or ladoB == ladoC)):
+        print('\n Os valores informados formam um triângulo isósceles.')
+    elif ((ladoA < ladoB + ladoC or ladoB < ladoA + ladoC or ladoC < ladoA + ladoB) and (ladoA != ladoB != ladoC)):
+        print('\n Os valores informados formam um triângulo escaleno.')
+    else:
+        print('\n Os valores informados não formam um triângulo.')
+
+triangle()
+
+#%%
+# 16) Faça um programa que calcule as raízes de uma equação do segundo grau, na forma
+# ax2 + bx + c. O programa deverá pedir os valores de a, b e c e fazer as consistências,
+# informando ao usuário nas seguintes situações:
+# a) Se o usuário informar o valor de A igual a zero, a equação não é do segundo grau e
+# o programa não deve fazer pedir os demais valores, sendo encerrado;
+# b) Se o delta calculado for negativo, a equação não possui raizes reais. Informe ao
+# usuário e encerre o programa;
+# c) Se o delta calculado for igual a zero a equação possui apenas uma raiz real e
+# informe-a ao usuário;
+# d) Se o delta for positivo, a equação possui duas raiz reais; informe-as ao usuário;
+
+def funcao_quadratica():
+    print('Bem-vindo(a) à calculadora de função do 2º grau!')
+    a = input('\n Insira o valor do coeficiente a: ')
+    b = input('\n Insira o valor do coeficiente b: ')
+    c = input('\n Insira o valor do coeficiente c: ')
+    a = float(a)
+    b = float(b)
+    c = float(c)
+    delta = b**2 - 4*a*c
+    x1 = round((-b + delta**(1/2))/2*a,2)
+    x2 = round((-b - delta**(1/2))/2*a,2)
+    print(f'\n O formato da equação inserida é {a}x² + ({b})x + {(c)}.')
+    if a == 0:
+        print('\n A equação não é do segundo grau, e sim do primeiro grau. '
+              'Lamento, mas o programa será encerrado!')
+    elif delta < 0:
+        print('\n O delta é negativo, e portanto não possui raízes reais. Para'
+              'esta finalidade, recomendamos que o caro usuário experimente'
+              'utilizar o conjunto dos números complexos. O programa será encerrado!')
+    elif delta == 0:
+        print('\n O delta é nulo, e portanto possui uma única raíz real.')
+        print(f'\n A raíz da equação é igual a {x1}.')
+    elif delta > 0:
+        print('\n O delta é positivo, e portanto possui duas raízes reais.')
+        print(f'\n As raízes da equação são iguais a {x1} e {x2}.')
+
+funcao_quadratica()
+
+
+
+#%%
+# 17) Faça um Programa que peça um número correspondente a um determinado ano e em
+# seguida informe se este ano é ou não bissexto.
+
+def ano():
+    year = input('Insira o ano: ')
+    year = int(year)
+    if (year % 4) == 0:
+        print(f'\n {year} é ano bissexto')
+    else:
+        print(f'\n {year} não é ano bissexto')
+
+ano()
+
+#%%
+# 18) Faça um Programa que peça uma data no formato dd/mm/aaaa e determine se a mesma
+# é uma data válida.
+from datetime import date
+
+def data():
+    print('\n Por favor, digite uma data no formato dd/mm/aaaa. ')
+    dia = input('\n Dia: ')
+    dia = int(dia)
+    mes = input('\n Mês: ')
+    mes = int(mes)
+    ano = input('\n Ano: ')
+    ano = int(ano)
+    dat = date(ano,mes,dia)
+    dat2 = dat.strftime('%d/%m/%y')
+    print(f'\n A data inserida foi {dat2}. É uma data válida.')
+
+data()
+
+
+
+
+#%%
+# 19) Faça um Programa que leia um número inteiro menor que 1000 e imprima a quantidade de centenas, dezenas e
+# unidades do mesmo. Observando os termos no plural a colocação do "e", da vírgula entre outros. Exemplo:
+
+def number_reader(numero):
+    unidade = numero % 10
+    numero1 = (numero - unidade)/10
+    dezena = numero1 % 10
+    centena = (numero1 - dezena)/10
+    if numero <= 1:
+        print(f'{numero} = {unidade} unidade.')
+    elif (numero > 1) and (numero <= 9):
+        print(f'{numero} = {unidade} unidades.')
+    elif (numero > 9) and (numero <= 99):
+        print(f'{numero} = {dezena} dezenas e {unidade} unidades.')
+    else:
+        print(f'{numero} = {centena} centenas, {dezena} dezenas e {unidade} unidades.')
+
+number_reader(618)
+
+#%%
+# 20)Faça um Programa para leitura de três notas parciais de um aluno. O programa deve calcular a média alcançada por
+# aluno e presentar:
+# a) A mensagem "Aprovado", se a média for maior ou igual a 7, com a respectiva média alcançada;
+# b) A mensagem "Reprovado", se a média for menor do que 7, com a respectiva média alcançada;
+# c) A mensagem "Aprovado com Distinção", se a média for igual a 10.
+
+def notas(nota1,nota2,nota3):
+    media = round((nota1 + nota2 + nota3)/3,1)
+    if media == 10:
+        print(f'Aprovado com Distinção. Nota: {media}.')
+    elif media < 7:
+        print(f'Reprovado. Nota: {media}.')
+    else:
+        print(f'Aprovado. Nota: {media}.')
+notas(10,10,10)
+
+#%%
+# 21) Faça um Programa para um caixa eletrônico. O programa deverá perguntar ao usuário a valor do saque e depois
+# informar quantas notas de cada valor serão fornecidas. As notas disponíveis serão as de 1, 5, 10, 50 e 100 reais.
+# O valor mínimo é de 10 reais e o máximo de 600 reais. O programa não deve se preocupar com a quantidade de notas
+# existentes na máquina.
+# Exemplo 1: Para sacar a quantia de 256 reais, o programa fornece duas notas de 100, uma nota de 50, uma nota de 5
+# e uma nota de 1;
+# Exemplo 2: Para sacar a quantia de 399 reais, o programa fornece três notas de 100, uma nota de 50, quatro notas
+# de 10, uma nota de 5 e quatro notas de 1.
+
+def dinheiro():
+    valor0 = int(input('Qual o valor de saque? '))
+    cem = int(valor0/100)
+    valor1 = valor0 - cem*100
+    cinquenta = int(valor1/50)
+    valor2 = valor1 - cinquenta*50
+    dez = int(valor2/10)
+    valor3 = valor2 - dez*10
+    cinco = int(valor3/5)
+    valor4 = valor3 - cinco*5
+    um = int(valor4/1)
+    if valor0 < 10:
+        print('\n O valor mínimo para saque é de R$20,00. Por favor, selecione um valor válido. ')
+    elif valor0 > 600:
+        print('\n O valor máximo para saque é de R$600,00. Por favor, selecione um valor válido.')
+    else:
+        print(f'\n Notas de R$100,00: {cem}')
+        print(f'\n Notas de R$50,00: {cinquenta}')
+        print(f'\n Notas de R$10,00: {dez}')
+        print(f'\n Notas de R$5,00: {cinco}')
+        print(f'\n Notas de R$1,00: {um}')
+
+dinheiro()
+#%%
+# 22) Faça um Programa que peça um número inteiro e determine se ele é par ou impar.
+
+def par_ou_impar():
+    numero = int(input('\n Insira um número inteiro qualquer: '))
+    if numero%2 == 0:
+        print(f'\n{numero} é um número par.')
+    else:
+        print(f'\n{numero} é um número ímpar.')
+
+par_ou_impar()
+
+#%%
+# 23) Faça um Programa que peça um número e informe se o número é inteiro ou decimal. Dica: utilize
+# uma função de arredondamento.
+
+def inteiro_ou_decimal():
+    numero = float(input('\n Insira um número: '))
+    if round(numero) == numero:
+        print('\n O número inserido é inteiro.')
+    else:
+        print('\n O número inserido é decimal.')
+
+inteiro_ou_decimal()
+#%%
+# 24) Faça um Programa que leia 2 números e em seguida pergunte ao usuário qual operação ele deseja realizar.
+
+def operacao(primeiro,segundo):
+    resposta = input('\n Qual operação você deseja realizar? ')
+    soma = primeiro+segundo
+    subtracao = primeiro-segundo
+    produto = primeiro*segundo
+    divisao = primeiro/segundo
+    if resposta == 'soma':
+        print(f'\n O resultado é {soma}.')
+    elif resposta == 'subtracao':
+        print(f'\n O resultado é {subtracao}.')
+    elif resposta == 'produto':
+        print(f'\n O resultado é {produto}.')
+    else:
+        print(f'\n O resultado é {divisao}.')
+
+operacao(5,10)
+
+#%%
+# 25) Faça um programa que faça 5 perguntas para uma pessoa sobre um crime. As perguntas são:
+# "Telefonou para a vítima?"
+# "Esteve no local do crime?"
+# "Mora perto da vítima?"
+# "Devia para a vítima?"
+# "Já trabalhou com a vítima?"
+# O programa deve no final emitir uma classificação sobre a participação da pessoa
+# no crime. Se a pessoa responder positivamente a 2 questões ela deve ser classificada como "Suspeita", entre 3 e 4
+# como "Cúmplice" e 5 como "Assassino". Caso contrário, ele será classificado como "Inocente".
+
+def investigacao():
+    lista = []
+    print('\n Olá! Por favor, responda às perguntas, com "sim" ou "não", da forma mais sincera possível. Lembre-se, '
+          'você está sob juramento e se mentir será preso(a)!')
+    pergunta1 = input('\n Você telefonou para a vítima? ')
+    lista.append(pergunta1)
+    pergunta2 = input('\n Você Esteve no local do crime? ')
+    lista.append(pergunta2)
+    pergunta3 = input('\n Você mora perto da vítima? ')
+    lista.append(pergunta3)
+    pergunta4 = input('\n Você possuía pendências financeiras com a vítima? ')
+    lista.append(pergunta4)
+    pergunta5 = input('\n Você já trabalhou com a vítima? ')
+    lista.append(pergunta5)
+    contador = lista.count('sim')
+    if contador == 2:
+        print('\n Atenção, oficial. Considere o indivíduo como SUSPEITO!')
+    elif (contador == 3) or (contador == 4):
+        print('\n Atenção, oficial. Considere o indivíduo como CÚMPLICE!!')
+    elif contador == 5:
+        print('\n Atenção, oficial. PRENDA ESTE INDIVÍDUO IMEDIATAMENTE, ELE É O ASSASSINO!!!!!')
+    else:
+        print('\n Atenção, oficial. Por favor, libere este indivíduo porque ele é INOCENTE.')
+
+investigacao()
+
+
+#%%
+# 26) Um posto está vendendo combustíveis com a seguinte tabela de descontos:
+# Álcool:
+# até 20 litros, desconto de 3% por litro
+# acima de 20 litros, desconto de 5% por litro
+# Gasolina:
+# até 20 litros, desconto de 4% por litro
+# acima de 20 litros, desconto de 6% por litro
+# Escreva um algoritmo que leia o número de litros vendidos, o
+# tipo de combustível (codificado da seguinte forma: A-álcool, G-gasolina), calcule e imprima o valor a ser
+# pago pelo cliente sabendo-se que o preço do litro da gasolina é R$ 2,50 o preço do litro do álcool é R$ 1,90.
+
+def combustiveis():
+    combustivel = input('\n Qual é o combustível desejado (gasolina/alcool)? ')
+    litros = float(input('\n Quantos litros serão colocados? '))
+    preco_alcool_menor_20L = (1.90*litros)-(1.90*litros*0.03)
+    preco_alcool_maior_20L = (1.90*litros)-(1.90*litros*0.05)
+    preco_gasolina_menor_20L = (2.50*litros)-(2.50*litros*0.04)
+    preco_gasolina_maior_20L = (2.50*litros)-(2.50*litros*0.06)
+    if (combustivel == 'alcool') and (litros <= 20):
+        print(f'\n O combustível escolhido foi Álcool, e seu preço por litro é de R$1,90. O preço a ser pago será '
+              f'R${preco_alcool_menor_20L} por {litros} litros de Álcool.')
+    elif (combustivel == 'alcool') and (litros > 20):
+        print(f'\n O combustível escolhido foi Álcool, e seu preço por litro é de R$1,90. O preço a ser pago será '
+              f'R${preco_alcool_maior_20L} por {litros} litros de Álcool.')
+    elif (combustivel == 'gasolina') and (litros <= 20):
+        print(f'\n O combustível escolhido foi Gasolina, e seu preço por litro é de R$2,50. O preço a ser pago será '
+              f'R${preco_gasolina_menor_20L} por {litros} litros de Gasolina.')
+    elif (combustivel == 'gasolina') and (litros > 20):
+        print(f'\n O combustível escolhido foi Gasolina, e seu preço por litro é de R$2,50. O preço a ser pago será '
+              f'R${preco_gasolina_maior_20L} por {litros} litros de Gasolina.')
+
+
+combustiveis()
+
+#%%
+# 27) Uma fruteira está vendendo frutas com a seguinte tabela de preços:
+#                       Até 5 Kg           Acima de 5 Kg
+# Morango         R$ 2,50 por Kg          R$ 2,20 por Kg
+# Maçã            R$ 1,80 por Kg          R$ 1,50 por Kg
+# Se o cliente comprar mais de 8 Kg em frutas ou o valor total da compra ultrapassar R$ 25,00, receberá ainda um
+# desconto de 10% sobre este total. Escreva um algoritmo para ler a quantidade (em Kg) de morangos e a quantidade
+# (em Kg) de maças adquiridas e escreva o valor a ser pago pelo cliente.
+
+def fruteira(morango,maca):
+    morango = float(morango)
+    maca = float(maca)
+    peso_total = morango + maca
+    if (peso_total <= 5):
+        preco_morango = 2.50*morango
+        preco_maca = 1.80*maca
+        preco_total = preco_morango + preco_maca
+        print(f'O preço a ser pago é de R${preco_total}. ')
+    elif (peso_total > 5) and (peso_total < 8):
+        preco_morango = 2.20*morango
+        preco_maca = 1.50*maca
+        preco_total = preco_morango + preco_maca
+        print(f'O preço a ser pago é de R${preco_total}. ')
+    elif (peso_total >= 8) or (preco_total > 25):
+        preco_morango = 2.20*morango
+        preco_maca = 1.50*maca
+        preco_total = round((preco_morango + preco_maca),2)
+        preco_total_desconto = 0.90*preco_total
+        print(f'O preço a ser pago é de R${preco_total_desconto}. ')
+
+
+fruteira(50,65)
+
+#%%
+# 28) O Hipermercado Tabajara está com uma promoção de carnes que é imperdível. Confira:
+#                       Até 5 Kg           Acima de 5 Kg
+# File Duplo      R$ 4,90 por Kg          R$ 5,80 por Kg
+# Alcatra         R$ 5,90 por Kg          R$ 6,80 por Kg
+# Picanha         R$ 6,90 por Kg          R$ 7,80 por Kg
+# Para atender a todos os clientes, cada cliente poderá levar apenas um dos tipos de carne da promoção,
+# porém não há limites para a quantidade de carne por cliente. Se compra for feita no cartão Tabajara o
+# cliente receberá ainda um desconto de 5% sobre o total da compra. Escreva um programa que peça o tipo
+# e a quantidade de carne comprada pelo usuário e gere um cupom fiscal, contendo as informações da
+# compra: tipo e quantidade de carne, preço total, tipo de pagamento, valor do desconto e valor a pagar.
+
+
+def carnes():
+    tipo = input('\n Qual o tipo de carne desejado (File Duplo/Alcatra/Picanha)?  ')
+    peso = float(input('\n Qual a quantidade, em Kg, de carne? '))
+    pagamento = input('\n Qual a forma de pagamento? ')
+    if (tipo == 'File Duplo') and (peso <= 5):
+        preco_file_duplo = peso*4.90
+        print(f'\n ------CUPOM FISCAL------'
+              f'\n Tipo da carne: {tipo} '
+              f'\n Quantidade comprada: {peso} Kg '
+              f'\n Preço total: R${preco_file_duplo} '
+              f'\n Tipo de pagamento: {pagamento} '
+              f'\n Valor do desconto: SEM DESCONTO '
+              f'\n Valor a pagar: R${preco_file_duplo} ')
+    if (tipo == 'Alcatra') and (peso <= 5):
+        preco_alcatra = peso*5.90
+        print(f'\n ------CUPOM FISCAL------'
+              f'\n Tipo da carne: {tipo} '
+              f'\n Quantidade comprada: {peso} Kg '
+              f'\n Preço total: R${preco_alcatra} '
+              f'\n Tipo de pagamento: {pagamento} '
+              f'\n Valor do desconto: SEM DESCONTO '
+              f'\n Valor a pagar: R${preco_alcatra} ')
+    if (tipo == 'Picanha') and (peso <= 5):
+        preco_picanha = peso*6.90
+        print(f'\n ------CUPOM FISCAL------'
+              f'\n Tipo da carne: {tipo} '
+              f'\n Quantidade comprada: {peso} Kg '
+              f'\n Preço total: R${preco_picanha} '
+              f'\n Tipo de pagamento: {pagamento} '
+              f'\n Valor do desconto: SEM DESCONTO '
+              f'\n Valor a pagar: R${preco_picanha} ')
+    if (tipo == 'File Duplo') and (peso > 5):
+        preco_file_duplo = peso*5.80
+        print(f'\n ------CUPOM FISCAL------'
+              f'\n Tipo da carne: {tipo} '
+              f'\n Quantidade comprada: {peso} Kg '
+              f'\n Preço total: R${preco_file_duplo} '
+              f'\n Tipo de pagamento: {pagamento} '
+              f'\n Valor do desconto: SEM DESCONTO '
+              f'\n Valor a pagar: R${preco_file_duplo} ')
+    if (tipo == 'Alcatra') and (peso > 5):
+        preco_alcatra = peso*6.80
+        print(f'\n ------CUPOM FISCAL------'
+              f'\n Tipo da carne: {tipo} '
+              f'\n Quantidade comprada: {peso} Kg '
+              f'\n Preço total: R${preco_alcatra} '
+              f'\n Tipo de pagamento: {pagamento} '
+              f'\n Valor do desconto: SEM DESCONTO '
+              f'\n Valor a pagar: R${preco_alcatra} ')
+    if (tipo == 'Picanha') and (peso > 5):
+        preco_picanha = peso*7.80
+        print(f'\n ------CUPOM FISCAL------'
+              f'\n Tipo da carne: {tipo} '
+              f'\n Quantidade comprada: {peso} Kg '
+              f'\n Preço total: R${preco_picanha} '
+              f'\n Tipo de pagamento: {pagamento} '
+              f'\n Valor do desconto: SEM DESCONTO '
+              f'\n Valor a pagar: R${preco_picanha}')
+
+    if (tipo == 'File Duplo') and (peso <= 5) and (pagamento == 'cartão Tabajara'):
+        preco_file_duplo = peso*4.90
+        desconto = preco_file_duplo*0.05
+        valor_pagar = preco_file_duplo - desconto
+        print(f'\n ------CUPOM FISCAL------'
+              f'\n Tipo da carne: {tipo} '
+              f'\n Quantidade comprada: {peso} Kg '
+              f'\n Preço total: R${preco_file_duplo} '
+              f'\n Tipo de pagamento: {pagamento} '
+              f'\n Valor do desconto: R${desconto} '
+              f'\n Valor a pagar: R${valor_pagar}')
+    if (tipo == 'Alcatra') and (peso <= 5) and (pagamento == 'cartão Tabajara'):
+        preco_alcatra = peso*5.90
+        desconto = preco_alcatra*0.05
+        valor_pagar = preco_alcatra - desconto
+        print(f'\n ------CUPOM FISCAL------'
+              f'\n Tipo da carne: {tipo} '
+              f'\n Quantidade comprada: {peso} Kg '
+              f'\n Preço total: R${preco_alcatra} '
+              f'\n Tipo de pagamento: {pagamento} '
+              f'\n Valor do desconto R${desconto}: '
+              f'\n Valor a pagar: R${valor_pagar} ')
+    if (tipo == 'Picanha') and (peso <= 5) and (pagamento == 'cartão Tabajara'):
+        preco_picanha = peso*6.90
+        desconto = preco_picanha*0.05
+        valor_pagar = preco_picanha - desconto
+        print(f'\n ------CUPOM FISCAL------'
+              f'\n Tipo da carne: {tipo} '
+              f'\n Quantidade comprada: {peso} Kg '
+              f'\n Preço total: R${preco_picanha} '
+              f'\n Tipo de pagamento: {pagamento} '
+              f'\n Valor do desconto: R${desconto} '
+              f'\n Valor a pagar: R${valor_pagar} ')
+    if (tipo == 'File Duplo') and (peso > 5) and (pagamento == 'cartão Tabajara'):
+        preco_file_duplo = peso*5.80
+        desconto = preco_file_duplo*0.05
+        valor_pagar = preco_file_duplo - desconto
+        print(f'\n ------CUPOM FISCAL------'
+              f'\n Tipo da carne: {tipo} '
+              f'\n Quantidade comprada: {peso} Kg '
+              f'\n Preço total: R${preco_file_duplo} '
+              f'\n Tipo de pagamento: {pagamento} '
+              f'\n Valor do desconto: R${desconto} '
+              f'\n Valor a pagar: R${valor_pagar} ')
+    if (tipo == 'Alcatra') and (peso > 5) and (pagamento == 'cartão Tabajara'):
+        preco_alcatra = peso*6.80
+        desconto = preco_alcatra*0.05
+        valor_pagar = preco_alcatra - desconto
+        print(f'\n ------CUPOM FISCAL------'
+              f'\n Tipo da carne: {tipo} '
+              f'\n Quantidade comprada: {peso} Kg '
+              f'\n Preço total: R${preco_alcatra} '
+              f'\n Tipo de pagamento: {pagamento} '
+              f'\n Valor do desconto: R${desconto} '
+              f'\n Valor a pagar: R${valor_pagar} ')
+    if (tipo == 'Picanha') and (peso > 5) and (pagamento == 'cartão Tabajara'):
+        preco_picanha = peso*7.80
+        desconto = preco_picanha*0.05
+        valor_pagar = preco_picanha - desconto
+        print(f'\n ------CUPOM FISCAL------'
+              f'\n Tipo da carne: {tipo} '
+              f'\n Quantidade comprada: {peso} Kg '
+              f'\n Preço total: R${preco_picanha} '
+              f'\n Tipo de pagamento: {pagamento} '
+              f'\n Valor do desconto: R${desconto} '
+              f'\n Valor a pagar: R${valor_pagar} ')
+
+carnes()
+
+
+
+
+
